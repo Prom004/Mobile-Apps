@@ -1,57 +1,16 @@
-# Miscellaneous
-*.class
-*.log
-*.pyc
-*.swp
-.DS_Store
-.atom/
-.build/
-.buildlog/
-.history
-.svn/
-.swiftpm/
-migrate_working_dir/
-
-# IntelliJ related
-*.iml
-*.ipr
-*.iws
-.idea/
-
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
-
 # Flutter/Dart/Pub related
 **/doc/api/
 **/ios/Flutter/.last_build_id
-.dart_tool/
-.flutter-plugins
-.flutter-plugins-dependencies
-.packages
-.pub-cache/
-.pub/
-build/
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/.pub-cache/
+**/.pub/
 **/build/
-.fvm/
-coverage/
-lib/generated_plugin_registrant.dart
-# For library packages, don't commit the pubspec.lock file.
-# Regenerating the pubspec.lock file lets you test your package against the latest compatible versions of its dependencies.
-# See https://dart.dev/guides/libraries/private-files
-#pubspec.lock
-
-# Symbolication related
-app.*.symbols
-
-# Obfuscation related
-app.*.map.json
-
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
+**/.fvm/
+**/coverage/
+**/lib/generated_plugin_registrant.dart
 
 # Android related
 **/android/**/gradle-wrapper.jar
@@ -62,7 +21,7 @@ app.*.map.json
 **/android/local.properties
 **/android/**/GeneratedPluginRegistrant.java
 **/android/key.properties
-*.jks
+**/*.jks
 
 # iOS related
 **/ios/**/*.mode1v3
@@ -109,11 +68,59 @@ app.*.map.json
 # Web related
 **/web/flutter_bootstrap.js
 
-# Coverage
-coverage/
+# IDE related
+**/.idea/
+**/.vscode/
+**/*.iml
+**/*.ipr
+**/*.iws
 
-# Exceptions to above rules.
-!**/ios/**/default.mode1v3
-!**/ios/**/default.mode2v3
-!**/ios/**/default.pbxuser
-!**/ios/**/default.perspectivev3
+# OS related
+**/.DS_Store
+**/Thumbs.db
+**/*.tmp
+**/*.temp
+
+# Logs
+**/*.log
+
+# Node modules (if any)
+**/node_modules/
+
+# Temporary files
+**/*.swp
+**/*.swo
+**/~*
+
+# Coverage
+**/coverage/
+
+# Test related
+**/test_driver/
+**/integration_test/driver/
+
+# Firebase
+**/google-services.json
+**/GoogleService-Info.plist
+**/.firebase/
+
+# Environment files
+**/.env
+**/.env.local
+**/.env.*.local
+
+# Database
+**/*.db
+**/*.sqlite
+**/*.sqlite3
+
+# Certificates
+**/*.p12
+**/*.pem
+**/*.key
+**/*.crt
+**/*.cer
+
+# Backup files
+**/*.bak
+**/*.backup

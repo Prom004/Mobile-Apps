@@ -18,21 +18,56 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Todo App - Organize your tasks efficiently">
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="flutter_app">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Todo App">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>flutter_app</title>
+  <title>Todo App</title>
   <link rel="manifest" href="manifest.json">
+
+  <!-- Remove any potential warning bars -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      overflow: hidden;
+    }
+
+    /* Hide any potential warning banners */
+    .flutter-warning,
+    .debug-banner,
+    .development-warning {
+      display: none !important;
+    }
+
+    /* Ensure full screen */
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+
+    /* Loading indicator */
+    .loading {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+  </style>
 </head>
 <body>
+  <div class="loading">Loading Todo App...</div>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>

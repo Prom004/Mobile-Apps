@@ -10,7 +10,6 @@ class AuthPage extends StatefulWidget {
 }
 
 class _AuthPageState extends State<AuthPage> with SingleTickerProviderStateMixin {
-  bool _isLoginPage = true;
   late AnimationController _animationController;
   late Animation<Offset> _slideAnimation;
 
@@ -37,16 +36,10 @@ class _AuthPageState extends State<AuthPage> with SingleTickerProviderStateMixin
   }
 
   void _switchToRegister() {
-    setState(() {
-      _isLoginPage = false;
-    });
     _animationController.forward();
   }
 
   void _switchToLogin() {
-    setState(() {
-      _isLoginPage = true;
-    });
     _animationController.reverse();
   }
 

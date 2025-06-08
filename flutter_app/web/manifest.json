@@ -1,11 +1,11 @@
 {
-    "name": "flutter_app",
-    "short_name": "flutter_app",
+    "name": "Todo App",
+    "short_name": "Todo App",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#121212",
+    "theme_color": "#673AB7",
+    "description": "Organize your tasks efficiently with Todo App",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
