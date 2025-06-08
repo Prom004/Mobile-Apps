@@ -7,12 +7,12 @@ class NavbarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder(
-      valueListenable: selectedPageNotifier, 
+    return ValueListenableBuilder<int>(
+      valueListenable: selectedPageNotifier,
       builder: (context, selectedPage, child) {
         return NavigationBar(
-          destinations: [
-            NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+          destinations: const [
+            NavigationDestination(icon: Icon(Icons.checklist), label: 'Todos'),
             NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
           ],
           onDestinationSelected: (int value) {
@@ -20,6 +20,7 @@ class NavbarWidget extends StatelessWidget {
           },
           selectedIndex: selectedPage,
         );
-      },);  
-        }
+      },
+    );
+  }
 }
