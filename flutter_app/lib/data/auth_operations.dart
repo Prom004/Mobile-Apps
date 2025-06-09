@@ -2,12 +2,12 @@ import 'package:flutter_app/data/notifiers.dart';
 
 class AuthOperations {
   // Demo users for testing (in a real app, this would be a backend API)
-  static final Map<String, String> _demoUsers = {
-    'admin@todo.com': 'admin123',
-    'user@todo.com': 'user123',
-    'demo@todo.com': 'demo123',
-    'test@todo.com': 'test123',
-  };
+  // static final Map<String, String> _demoUsers = {
+  //   'admin@todo.com': 'admin123',
+  //   'user@todo.com': 'user123',
+  //   'demo@todo.com': 'demo123',
+  //   'test@todo.com': 'test123',
+  // };
 
   // Registered users storage (in a real app, this would be a database)
   static final Map<String, Map<String, String>> _registeredUsers = {};
@@ -24,12 +24,12 @@ class AuthOperations {
       String? userName;
 
       // Check demo users first
-      if (_demoUsers.containsKey(emailLower) &&
-          _demoUsers[emailLower] == password) {
-        userName = _getNameFromEmail(email);
-      }
+      // if (_demoUsers.containsKey(emailLower) &&
+      //     _demoUsers[emailLower] == password) {
+      //   userName = _getNameFromEmail(email);
+      // }
       // Check registered users
-      else if (_registeredUsers.containsKey(emailLower) &&
+      if (_registeredUsers.containsKey(emailLower) &&
                _registeredUsers[emailLower]!['password'] == password) {
         userName = _registeredUsers[emailLower]!['name']!;
       }
@@ -68,13 +68,13 @@ class AuthOperations {
       final emailLower = email.toLowerCase();
 
       // Check if user already exists
-      if (_demoUsers.containsKey(emailLower) || _registeredUsers.containsKey(emailLower)) {
-        isLoadingNotifier.value = false;
-        return {
-          'success': false,
-          'message': 'An account with this email already exists.',
-        };
-      }
+      // if (_demoUsers.containsKey(emailLower) || _registeredUsers.containsKey(emailLower)) {
+      //   isLoadingNotifier.value = false;
+      //   return {
+      //     'success': false,
+      //     'message': 'An account with this email already exists.',
+      //   };
+      // }
 
       // Validate input
       if (name.trim().length < 2) {
@@ -166,18 +166,18 @@ class AuthOperations {
   }
 
   // Get demo credentials for testing
-  static List<Map<String, String>> getDemoCredentials() {
-    return _demoUsers.entries.map((entry) => {
-      'email': entry.key,
-      'password': entry.value,
-    }).toList();
-  }
+  // static List<Map<String, String>> getDemoCredentials() {
+  //   return _demoUsers.entries.map((entry) => {
+  //     'email': entry.key,
+  //     'password': entry.value,
+  //   }).toList();
+  // }
 
   // Check if email is already registered
-  static bool isEmailRegistered(String email) {
-    final emailLower = email.toLowerCase();
-    return _demoUsers.containsKey(emailLower) || _registeredUsers.containsKey(emailLower);
-  }
+  // static bool isEmailRegistered(String email) {
+  //   final emailLower = email.toLowerCase();
+  //   return _demoUsers.containsKey(emailLower) || _registeredUsers.containsKey(emailLower);
+  // }
 
   // Get total registered users count
   static int get registeredUsersCount => _registeredUsers.length;
@@ -214,5 +214,10 @@ class AuthOperations {
         if (!hasNumbers) 'One number',
       ],
     };
+  }
+
+  static bool isEmailRegistered(String email) {
+    final emailLower = email.toLowerCase();
+    return _registeredUsers.containsKey(emailLower);
   }
 }

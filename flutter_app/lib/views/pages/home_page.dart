@@ -140,27 +140,20 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         const SizedBox(width: 8),
-                        Expanded(
-                          child: Card(
-                            child: InkWell(
-                              onTap: () => TodoOperations.clearCompleted(),
-                              borderRadius: BorderRadius.circular(12),
-                              child: Padding(
-                                padding: const EdgeInsets.all(12.0),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Icon(Icons.clear_all, color: Colors.orange, size: 20),
-                                    const SizedBox(width: 8),
-                                    Text(
-                                      'Clear Done',
-                                      style: TextStyle(
-                                        color: Colors.orange,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ],
-                                ),
+                        Center(
+                          child: ElevatedButton.icon(
+                            onPressed: () => TodoOperations.clearCompleted(),
+                            icon: Icon(Icons.clear_all, color: Colors.orange),
+                            label: Text(
+                              'Clear Done',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            style: ElevatedButton.styleFrom(
+                              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12),
                               ),
                             ),
                           ),

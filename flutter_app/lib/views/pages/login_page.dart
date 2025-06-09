@@ -47,42 +47,42 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
-  void _showDemoCredentials() {
-    final credentials = AuthOperations.getDemoCredentials();
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('Demo Credentials'),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text('Use any of these credentials to login:'),
-            const SizedBox(height: 16),
-            ...credentials.map((cred) => Padding(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Email: ${cred['email']}', 
-                    style: const TextStyle(fontFamily: 'monospace')),
-                  Text('Password: ${cred['password']}', 
-                    style: const TextStyle(fontFamily: 'monospace')),
-                  const Divider(),
-                ],
-              ),
-            )),
-          ],
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('Close'),
-          ),
-        ],
-      ),
-    );
-  }
+  // void _showDemoCredentials() {
+  //   final credentials = AuthOperations.getDemoCredentials();
+  //   showDialog(
+  //     context: context,
+  //     builder: (context) => AlertDialog(
+  //       title: const Text('Demo Credentials'),
+  //       content: Column(
+  //         mainAxisSize: MainAxisSize.min,
+  //         crossAxisAlignment: CrossAxisAlignment.start,
+  //         children: [
+  //           const Text('Use any of these credentials to login:'),
+  //           const SizedBox(height: 16),
+  //           ...credentials.map((cred) => Padding(
+  //             padding: const EdgeInsets.only(bottom: 8),
+  //             child: Column(
+  //               crossAxisAlignment: CrossAxisAlignment.start,
+  //               children: [
+  //                 Text('Email: ${cred['email']}', 
+  //                   style: const TextStyle(fontFamily: 'monospace')),
+  //                 Text('Password: ${cred['password']}', 
+  //                   style: const TextStyle(fontFamily: 'monospace')),
+  //                 const Divider(),
+  //               ],
+  //             ),
+  //           )),
+  //         ],
+  //       ),
+  //       actions: [
+  //         TextButton(
+  //           onPressed: () => Navigator.pop(context),
+  //           child: const Text('Close'),
+  //         ),
+  //       ],
+  //     ),
+  //   );
+  // }
 
   void _fillDemoCredentials() {
     _emailController.text = 'demo@todo.com';
@@ -242,13 +242,13 @@ class _LoginPageState extends State<LoginPage> {
                           child: const Text('Quick Demo'),
                         ),
                       ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: OutlinedButton(
-                          onPressed: _showDemoCredentials,
-                          child: const Text('View Credentials'),
-                        ),
-                      ),
+                      // const SizedBox(width: 12),
+                      // Expanded(
+                      //   child: OutlinedButton(
+                      //     onPressed: _showDemoCredentials,
+                      //     child: const Text('View Credentials'),
+                      //   ),
+                      // ),
                     ],
                   ),
                   const SizedBox(height: 24),

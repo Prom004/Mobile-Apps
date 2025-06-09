@@ -37,9 +37,9 @@ class _MyAppState extends State<MyAppState> {
               ),
             useMaterial3: true,
             // Remove any default app bar styling that might show warnings
-            appBarTheme: const AppBarTheme(
-              systemOverlayStyle: SystemUiOverlayStyle.light,
-            ),
+            // appBarTheme: const AppBarTheme(
+            //   systemOverlayStyle: SystemUiOverlayStyle.light,
+            // ),
           ),
           home: const AuthWrapper(),
           // Additional debug configurations
